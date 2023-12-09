@@ -1,13 +1,26 @@
 .snake{
+    font-family: "ＭＳ Ｐゴシック";
     background-color: rgb(255, 255, 255);
     color:transparent;
-    border-radius: 20px;
+    border-radius: 0px;
     text-align: center;
     width: 50px;
     height: 50px;
     border: none;
 }
 .snakee{
+    font-family: "ＭＳ Ｐゴシック";
+    background-color: rgb(255, 255, 255);
+    color:black;
+    border-radius: 0px;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    border: none;
+}
+.snakeee{
+
+    display: none;
     background-color: rgb(255, 255, 255);
     color:black;
     border-radius: 20px;
@@ -19,16 +32,20 @@
 body{
     display: inline;
     background-color: rgb(255, 160, 160);
+    font-family: "ＭＳ Ｐゴシック";
 }
 .number{
+    font-family: "ＭＳ Ｐゴシック";
     position: fixed;
 
 }
 .numberr{
+    font-family: "ＭＳ Ｐゴシック";
     position: fixed;
     margin-top: -55px;
     margin-left: 527px;
 }
 .main{
+    font-family: "ＭＳ Ｐゴシック";
     margin-top: 100px;
 }
