@@ -20,7 +20,7 @@ const arr_word = ["A","B","C","D","E","F","G","H","I"];
 //общие
 let eat;
 let lengthh = 3;
-let speed = 300;
+let speed = 150;
 let intervalId;
 let right_act = false;
 let up_act = false;
