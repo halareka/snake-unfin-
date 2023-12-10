@@ -1,51 +1,64 @@
+@import url('https://fonts.cdnfonts.com/css/common-pixel');
+
 .snake{
-    font-family: "ＭＳ Ｐゴシック";
+    display: inline-block;
+    margin-top: 4px;
     background-color: rgb(255, 255, 255);
     color:transparent;
-    border-radius: 0px;
+    border-radius: 10px;
     text-align: center;
     width: 50px;
     height: 50px;
     border: none;
-}
-.snakee{
-    font-family: "ＭＳ Ｐゴシック";
-    background-color: rgb(255, 255, 255);
-    color:black;
-    border-radius: 0px;
-    text-align: center;
-    width: 50px;
-    height: 50px;
-    border: none;
-}
-.snakeee{
 
-    display: none;
-    background-color: rgb(255, 255, 255);
-    color:black;
-    border-radius: 20px;
-    text-align: center;
-    width: 50px;
-    height: 50px;
-    border: none;
 }
+
+
+
+@media screen and (max-width: 768px) {
+    .snake {
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .snake {
+        width: 30px;
+        height: 30px;border-radius: 5px;
+    }
+}
+
 body{
-    display: inline;
+
     background-color: rgb(255, 160, 160);
     font-family: "ＭＳ Ｐゴシック";
-}
-.number{
-    font-family: "ＭＳ Ｐゴシック";
-    position: fixed;
+    font-size:medium;
 
 }
-.numberr{
-    font-family: "ＭＳ Ｐゴシック";
-    position: fixed;
-    margin-top: -55px;
-    margin-left: 527px;
-}
 .main{
-    font-family: "ＭＳ Ｐゴシック";
     margin-top: 100px;
 }
+dialog{
+
+    background-color: rgb(214, 254, 251);
+    border: none;
+    border-radius: 15px;
+    width: 250px;
+    height: 130px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+.btn{
+    background-color: rgb(230, 227, 227);
+    border: none;
+    border-radius: 15px;
+    width: 200px;
+    height: 40px;   
+    font-family: "ＭＳ Ｐゴシック";font-weight: 900;
+}
+.btn:hover{
+    background-color:  rgb(187, 161, 161) ;
+}
+
