@@ -1,4 +1,11 @@
 const dialog = document.querySelector("dialog");
+const leftbtn = document.getElementById("leftbtn");
+const rightbtn = document.getElementById("rightbtn");
+const upbtn = document.getElementById("upbtn");
+const downbtn = document.getElementById("downbtn");
+
+
+
 //right
 var lftwo;
 let con_let_right = -2;
@@ -24,7 +31,7 @@ let i = 0;
 let iii = 0;
 //
 document.addEventListener('keydown', function (event) {
-    if (event.key === 'D' || event.key === 'd'  || event.key === 'В' || event.key === 'в' ) {
+    if (event.key === 'D' || event.key === 'd'  || event.key === 'В' || event.key === 'в' || event.onclick == rightbtn) {
         if(right_act === false){
             if(game !== false){
                 clearInterval(intervalId);
@@ -66,6 +73,48 @@ document.addEventListener('keydown', function (event) {
 
     }
 });
+leftbtn.addEventListener('click', function() {
+    if(right_act === false){
+        if(game !== false){
+            clearInterval(intervalId);
+            intervalId = setInterval(left, speed);
+            right_act = true;
+            up_act = false;
+        }
+    }
+});
+
+rightbtn.addEventListener('click', function() {
+    if(right_act === false){
+        if(game !== false){
+            clearInterval(intervalId);
+            intervalId = setInterval(right, speed);
+            right_act = true;
+            up_act = false;
+        }
+    }
+});
+
+upbtn.addEventListener('click', function() {
+    if(up_act === false){
+        clearInterval(intervalId);
+        intervalId = setInterval(up, speed);
+        up_act = true;
+        right_act = false;
+        game = true;
+    }
+});
+
+downbtn.addEventListener('click', function() {
+    if(up_act === false){
+        clearInterval(intervalId);
+        intervalId = setInterval(down, speed);
+        up_act = true;
+        right_act = false;
+        game = true;
+    }
+});
+
 function down(){
     if(iii == 0){iii = 1;}
     while(true){
@@ -125,7 +174,7 @@ function clear_move(){
         lftwo = array[con_let];
         if(con == lftwo){
             document.getElementById(con).style.background = "red";
-            speed = 100000000;
+            stop();
             dialog.showModal();
         }
         a++;
@@ -136,3 +185,7 @@ function rand_eat(){
     document.getElementById(eat).style.background = "orange";  
 }
 rand_eat();
+function stop(){
+    speed = 100000000;
+    up();
+}
